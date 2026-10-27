@@ -1,0 +1,6 @@
+{
+  "name": "elo - Surplus & Export Leftovers Deals",
+  "description": "Shop export quality factory overstock, crazy deals, bundles, and clearance apparel at unbeatable prices on elo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

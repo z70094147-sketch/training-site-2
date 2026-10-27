@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "error": "#ba1a1a", "on-primary-fixed": "#410007", "on-error": "#ffffff", "inverse-primary": "#ffb3b1", "border-hairline": "#E2E8F0", "primary-fixed": "#ffdad8", "tertiary-container": "#00855b", "secondary-container": "#d9dff5", "text-on-dark": "#FFFFFF", "surface-tint": "#bb152c", "on-primary-fixed-variant": "#92001c", "surface-subtle": "#F1F5F9", "on-secondary-container": "#5c6274", "badge-deal-text": "#991B1B", "primary-container": "#db313f", "on-surface-variant": "#5b403f", "background": "#f7f9fb", "on-secondary-fixed-variant": "#404758", "outline": "#8f6f6e", "surface-container-highest": "#e0e3e5", "badge-savings-text": "#065F46", "tertiary": "#006947", "surface-container-lowest": "#ffffff", "surface-container-low": "#f2f4f6", "surface-variant": "#e0e3e5", "surface-container-high": "#e6e8ea", "on-error-container": "#93000a", "on-tertiary-container": "#f5fff6", "secondary": "#575e70", "promo-coral": "#FF3E3E", "text-muted": "#64748B", "inverse-on-surface": "#eff1f3", "inverse-surface": "#2d3133", "surface": "#f7f9fb", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "on-background": "#191c1e", "on-tertiary-fixed": "#002113", "on-primary": "#ffffff", "secondary-fixed": "#dce2f7", "badge-savings-bg": "#ECFDF5", "tertiary-fixed": "#6ffbbe", "error-container": "#ffdad6", "primary-fixed-dim": "#ffb3b1", "on-primary-container": "#fffbff", "primary": "#b7102a", "outline-variant": "#e4bebc", "badge-deal-bg": "#FEE2E2", "secondary-fixed-dim": "#c0c6db", "on-tertiary-fixed-variant": "#005236", "on-surface": "#191c1e", "on-secondary-fixed": "#141b2b", "tertiary-fixed-dim": "#4edea3", "surface-bright": "#f7f9fb", "surface-dim": "#d8dadc", "surface-container": "#eceef0" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter": "0.75rem", "margin": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-md": "0.75rem", "space-xl": "1.5rem", "space-lg": "1rem" }, fontFamily: { "headline-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "price-original": ["Plus Jakarta Sans"], "label-timer": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-badge": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-bottom-nav": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "price-sale": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"] }, fontSize: { "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-sm": ["16px", { "lineHeight": "22px", "fontWeight": "600" }], "display-hero": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "price-original": ["13px", { "lineHeight": "16px", "fontWeight": "400" }], "label-timer": ["15px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "800" }], "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "label-badge": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-lg": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-bottom-nav": ["10px", { "lineHeight": "12px", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "display-hero-mobile": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "price-sale": ["16px", { "lineHeight": "20px", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-28 px-margin flex flex-col justify-between py-space-xs"><div class="flex items-center justify-between gap-space-sm h-11"><div class="flex items-center gap-space-sm"><img alt="elo Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WcwII5ZFiY4snXkmGkA019jmY6aY66AqjHBKrm70en5f33XqDfosyX3XpCGqAXL4-c3JZUq3fyAXptjkITDrujBf45nif41yEWjaRkC1JbOIKVJ6B_uQsYY-5D359prp2ge-QXwBnex3seMvSdtByJd09-k0gY9LZ0QdYcsknsTdVddf4EPc5LH1a6n5b_UyinuyU5qSUjOpHgu0NaCJwFwtBP_iFATgEn5kJtnobrYOcFoHUfAPqmJA"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-bold">elo</span><span class="hidden sm:inline-block font-body-sm text-body-sm text-on-surface-variant font-medium">| Flash Deals</span></div><div class="flex items-center gap-space-xs"><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container"><span class="material-symbols-outlined text-[22px]">notifications</span></button><a aria-label="Cart Bag" class="w-11 h-11 relative flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container" data-path="cart" href="#"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute top-1 right-1 w-4 h-4 bg-primary text-on-primary font-label-badge text-label-badge rounded-full flex items-center justify-center font-bold">2</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="h-11 flex items-center"><div class="relative w-full flex items-center h-10 bg-surface-container-low rounded-xl px-space-sm shadow-[0_1px_3px_rgba(0,0,0,0.02)]"><span class="material-symbols-outlined text-on-surface-variant text-[20px] mr-space-xs">search</span><input class="w-full bg-transparent border-0 outline-none text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm" placeholder="Search 10,000+ export quality products..." type="search"/><button aria-label="Voice or Camera Search" class="w-8 h-8 flex items-center justify-center text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">photo_camera</span></button></div></div></div></header><main class="flex-1 w-full bg-surface pt-28 pb-20"><div class="flex flex-col w-full">
+<!-- Live Urgency Ticker Ribbon -->
+<div class="w-full bg-primary text-on-primary px-margin py-1.5 flex items-center justify-between text-body-sm shadow-sm overflow-hidden select-none">
+<div class="flex items-center gap-1.5 font-bold tracking-tight">
+<span class="material-symbols-outlined text-[16px] animate-pulse">local_fire_department</span>
+<span class="text-xs uppercase tracking-wide">SURPLUS RUNOUT • EXPORT LEFTOVERS</span>
+</div>
+<div class="flex items-center gap-1 text-[11px] bg-black/20 px-2 py-0.5 rounded-full font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+<span>428 shoppers active</span>
+</div>
+</div>
+<!-- Hero Deal Banner Block -->
+<section class="relative w-full px-margin pt-space-md pb-space-sm">
+<div class="w-full rounded-2xl bg-gradient-to-br from-primary via-primary-container to-promo-coral text-on-primary p-space-md shadow-md flex flex-col gap-space-sm relative overflow-hidden">
+<!-- Decorative Backdrop Icons -->
+<div class="absolute -right-4 -bottom-6 opacity-10 pointer-events-none select-none">
+<span class="material-symbols-outlined text-[140px] text-white">bolt</span>
+</div>
+<!-- Pill & Title Stack -->
+<div class="flex flex-col gap-1 z-10">
+<div class="inline-flex items-center gap-1.5 self-start bg-white/20 backdrop-blur-md px-2.5 py-0.5 rounded-full text-white text-[11px] font-bold tracking-wide uppercase">
+<span class="material-symbols-outlined text-[14px]">offline_bolt</span>
+<span>Save Minimum 40% to 70%</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-white tracking-tight uppercase drop-shadow-sm font-extrabold mt-1">
+          CRAZY DEALS &amp; MEGA BUNDLES
+        </h1>
+<p class="font-body-sm text-body-sm text-white/90">
+          Factory overstock &amp; export-grade clearance. When it's gone, it's gone!
+        </p>
+</div>
+<!-- Segmented Flash Urgency Countdown -->
+<div class="mt-1 bg-black/25 backdrop-blur-md rounded-xl p-2.5 flex flex-col gap-1.5 z-10">
+<div class="flex items-center justify-between text-white/90 text-xs">
+<span class="flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[15px] text-amber-300">timer</span>
+            Flash Window Closes
+          </span>
+<span class="text-[11px] text-white/80 font-medium">Ends Thursday 11:59 AM</span>
+</div>
+<!-- Timer Cells -->
+<div class="grid grid-cols-4 gap-2 text-center" id="flash-countdown">
+<div class="bg-black/35 rounded-lg py-1.5 flex flex-col items-center">
+<span class="font-label-timer text-label-timer text-white tabular-nums tracking-tight font-extrabold" id="timer-days">02</span>
+<span class="text-[9px] font-bold text-white/70 uppercase tracking-wider">Days</span>
+</div>
+<div class="bg-black/35 rounded-lg py-1.5 flex flex-col items-center">
+<span class="font-label-timer text-label-timer text-white tabular-nums tracking-tight font-extrabold" id="timer-hours">01</span>
+<span class="text-[9px] font-bold text-white/70 uppercase tracking-wider">Hours</span>
+</div>
+<div class="bg-black/35 rounded-lg py-1.5 flex flex-col items-center">
+<span class="font-label-timer text-label-timer text-white tabular-nums tracking-tight font-extrabold" id="timer-mins">40</span>
+<span class="text-[9px] font-bold text-white/70 uppercase tracking-wider">Mins</span>
+</div>
+<div class="bg-black/35 rounded-lg py-1.5 flex flex-col items-center">
+<span class="font-label-timer text-label-timer text-white tabular-nums tracking-tight font-extrabold" id="timer-secs">29</span>
+<span class="text-[9px] font-bold text-white/70 uppercase tracking-wider">Secs</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Horizontal Filter Chips Carousel -->
+<section class="w-full px-margin py-space-xs">
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-1 text-on-surface" id="filter-chip-bar">
+<button class="filter-chip flex-shrink-0 px-3.5 py-1.5 rounded-full font-headline-sm text-[13px] bg-on-background text-surface-container-lowest shadow-sm transition-all" data-category="all">
+        All Deals
+      </button>
+<button class="filter-chip flex-shrink-0 px-3.5 py-1.5 rounded-full font-headline-sm text-[13px] bg-surface-subtle text-on-surface-variant hover:text-on-surface transition-all" data-category="under-999">
+        Under Rs. 999
+      </button>
+<button class="filter-chip flex-shrink-0 px-3.5 py-1.5 rounded-full font-headline-sm text-[13px] bg-surface-subtle text-on-surface-variant hover:text-on-surface transition-all" data-category="winter">
+        Winter Warmers
+      </button>
+<button class="filter-chip flex-shrink-0 px-3.5 py-1.5 rounded-full font-headline-sm text-[13px] bg-surface-subtle text-on-surface-variant hover:text-on-surface transition-all" data-category="men">
+        Men
+      </button>
+<button class="filter-chip flex-shrink-0 px-3.5 py-1.5 rounded-full font-headline-sm text-[13px] bg-surface-subtle text-on-surface-variant hover:text-on-surface transition-all" data-category="women">
+        Women
+      </button>
+<button class="filter-chip flex-shrink-0 px-3.5 py-1.5 rounded-full font-headline-sm text-[13px] bg-surface-subtle text-on-surface-variant hover:text-on-surface transition-all" data-category="kids">
+        Kids
+      </button>
+<button class="filter-chip flex-shrink-0 px-3.5 py-1.5 rounded-full font-headline-sm text-[13px] bg-badge-deal-bg text-badge-deal-text font-bold transition-all" data-category="clearance">
+        🔥 Last Piece Clearance
+      </button>
+</div>
+</section>
+<!-- Product Grid Metadata / Counter -->
+<div class="px-margin pt-space-xs pb-space-xs flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1 font-semibold text-on-surface">
+<span>8 Flash Surplus Items</span>
+<span class="text-xs text-badge-deal-text font-bold">• Selling Fast</span>
+</div>
+<div class="flex items-center gap-1 text-[12px] bg-surface-container-low px-2 py-0.5 rounded-md text-on-surface-variant font-medium">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+      100% Export Surplus
+    </div>
+</div>
+<!-- 2-Column Responsive E-Commerce Product Cards Grid -->
+<section class="px-margin py-space-xs pb-space-lg grid grid-cols-2 gap-gutter" id="deal-cards-container">
+<!-- Product 1: Hummel Boy's Quarter Zipper -->
+<article class="deal-card flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm transition-transform active:scale-[0.99]" data-category="kids under-999 winter">
+<!-- Media Aspect Ratio Container -->
+<div class="relative w-full aspect-[1/1.22] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A young athletic boy model wearing a fiery red Hummel activewear quarter-zipper fleece sweatshirt against a soft grey studio backdrop, high-contrast studio editorial lighting, crisp fabric texture, e-commerce apparel photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAedsH67oY78q9PCgW96Runrvy32Ne-EZtuGOEsWvhZ2VrGT68AAU6RLesAcDNYOvt0d1Dj0hgI4HODv5pOf-UrcbjdvxBVzl7bkbxDtmE3UNU4p2WozBr7WB5oPI3RM6S1vhvJUL09MOYsrVLp-hoj4FxRPrEJ-MJJB_xRS8wPwmv6XFzFlSBsHqUsx4MvIk1SxM927QLp6UWmOBGlPUOirnCS9Z5gcg7N3_hNXSOr3mldRcwJTYE"/>
+<!-- Badges -->
+<span class="absolute top-2 left-2 bg-badge-deal-bg text-badge-deal-text font-label-badge text-label-badge font-extrabold px-2 py-0.5 rounded-full shadow-xs">
+          62% OFF
+        </span>
+<button aria-label="Save to Wishlist" class="wishlist-btn absolute top-2 right-2 w-7 h-7 rounded-full bg-white/85 backdrop-blur-sm flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors shadow-xs">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+<span class="absolute bottom-1.5 left-2 bg-black/60 backdrop-blur-xs text-white text-[10px] font-bold px-1.5 py-0.5 rounded">
+          Bundle Offer
+        </span>
+</div>
+<!-- Body Stack -->
+<div class="p-2.5 flex flex-col flex-1 justify-between gap-1.5">
+<!-- Variant Swatches -->
+<div class="flex items-center gap-1.5">
+<span class="w-3.5 h-3.5 rounded-full bg-red-600 ring-1 ring-offset-1 ring-red-400"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-slate-800"></span>
+<span class="text-[10px] text-on-surface-variant font-medium ml-auto">Red</span>
+</div>
+<!-- Title -->
+<h2 class="font-body-sm text-body-sm font-semibold text-on-surface line-clamp-2 leading-tight min-h-[32px]">
+          Hummel Boy's Activewear Quarter Zipper Sweatshirt
+        </h2>
+<!-- Price Cluster -->
+<div class="flex items-baseline gap-1.5 flex-wrap">
+<span class="font-price-sale text-price-sale text-primary font-extrabold">Rs. 999</span>
+<span class="font-price-original text-price-original text-on-surface-variant/70 line-through">Rs. 2,699</span>
+</div>
+<!-- Stock Urgency Bar -->
+<div class="flex flex-col gap-1 mt-0.5">
+<div class="flex justify-between items-center text-[10px] font-bold text-badge-deal-text">
+<span>Only 3 left in stock!</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-promo-coral rounded-full w-[85%]"></div>
+</div>
+</div>
+<!-- Action CTA -->
+<button class="quick-add-btn mt-1 w-full h-9 bg-primary text-on-primary rounded-lg font-headline-sm text-xs font-bold flex items-center justify-center gap-1 transition-all hover:bg-primary-container active:scale-95 shadow-xs" data-item="Hummel Boy's Activewear">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>Quick Buy</span>
+</button>
+</div>
+</article>
+<!-- Product 2: BHM Men's Bomber Jacket -->
+<article class="deal-card flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm transition-transform active:scale-[0.99]" data-category="men winter clearance">
+<div class="relative w-full aspect-[1/1.22] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A trendy young South Asian man sporting a premium sand beige military style bomber jacket with ribbed collar and cuffs, outdoor warm cinematic sunlight, editorial lookbook catalog style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC54paVHt5PcMsAkFVDM8PUOOmtEZ0aRKXPagDWe5NH0jPUB_fKsJOR7jmv63usFV9D_J4qkhGhHlwGgCuZwJRwKUC-i8znZYi14o1_Jz08REMFMXdDF1BsUK487I6ecrDRsYl4HQP_UiZ9iYSRa_YGSWE4lw1SBPm9abKqGs829hBj7gWBuIvzI9pQ7wR3DykuI2IRfdW4kAbvWnbIud9n2261F1X4mbhiRYb0auNoDTCL_2iqiyA"/>
+<span class="absolute top-2 left-2 bg-badge-deal-bg text-badge-deal-text font-label-badge text-label-badge font-extrabold px-2 py-0.5 rounded-full shadow-xs">
+          42% OFF
+        </span>
+<button aria-label="Save to Wishlist" class="wishlist-btn absolute top-2 right-2 w-7 h-7 rounded-full bg-white/85 backdrop-blur-sm flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors shadow-xs">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+<span class="absolute bottom-1.5 left-2 bg-badge-deal-bg text-badge-deal-text text-[10px] font-extrabold px-1.5 py-0.5 rounded">
+          Last 2 Pcs
+        </span>
+</div>
+<div class="p-2.5 flex flex-col flex-1 justify-between gap-1.5">
+<div class="flex items-center gap-1.5">
+<span class="w-3.5 h-3.5 rounded-full bg-[#d2b48c] ring-1 ring-offset-1 ring-stone-400"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-stone-900"></span>
+<span class="text-[10px] text-on-surface-variant font-medium ml-auto">Beige</span>
+</div>
+<h2 class="font-body-sm text-body-sm font-semibold text-on-surface line-clamp-2 leading-tight min-h-[32px]">
+          BHM Men's Premium Bomber Jacket
+        </h2>
+<div class="flex items-baseline gap-1.5 flex-wrap">
+<span class="font-price-sale text-price-sale text-primary font-extrabold">Rs. 1,999</span>
+<span class="font-price-original text-price-original text-on-surface-variant/70 line-through">Rs. 3,499</span>
+</div>
+<div class="flex flex-col gap-1 mt-0.5">
+<div class="flex justify-between items-center text-[10px] font-bold text-badge-deal-text">
+<span>Only 2 left at this price!</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-error rounded-full w-[92%]"></div>
+</div>
+</div>
+<button class="quick-add-btn mt-1 w-full h-9 bg-primary text-on-primary rounded-lg font-headline-sm text-xs font-bold flex items-center justify-center gap-1 transition-all hover:bg-primary-container active:scale-95 shadow-xs" data-item="BHM Bomber Jacket">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>Quick Buy</span>
+</button>
+</div>
+</article>
+<!-- Product 3: Polo Republica Men's Tipped Polo Shirt -->
+<article class="deal-card flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm transition-transform active:scale-[0.99]" data-category="men under-999">
+<div class="relative w-full aspect-[1/1.22] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Classic navy blue pique cotton tipped polo shirt on male model, white contrast stripes on ribbed collar and armbands, studio lighting, premium export stitch detail, clean backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOmExS-ahVKAudH1IWnxI1eSc8PSXkhzcC0AdEf75Ey9q92zJjwqhWKuaif-tpvhz3iCAuByYBuKMnOl2vnGbcM0TDxXcqQDfRy2gXZB92JBRNy8d87fum2jMLS7GvvO61OOcZv2zmhue6tvACciAvJL_HWx700Yup-3aKLvpQABrjc237am4KKY_xu_k6TSAs9a3Gfok_GZe74eGMbTileTM1Gky956tBLgyEy-5fjEIXN_GPyTg"/>
+<span class="absolute top-2 left-2 bg-badge-deal-bg text-badge-deal-text font-label-badge text-label-badge font-extrabold px-2 py-0.5 rounded-full shadow-xs">
+          40% OFF
+        </span>
+<button aria-label="Save to Wishlist" class="wishlist-btn absolute top-2 right-2 w-7 h-7 rounded-full bg-white/85 backdrop-blur-sm flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors shadow-xs">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+<span class="absolute bottom-1.5 left-2 bg-black/60 backdrop-blur-xs text-white text-[10px] font-bold px-1.5 py-0.5 rounded">
+          Top Seller
+        </span>
+</div>
+<div class="p-2.5 flex flex-col flex-1 justify-between gap-1.5">
+<div class="flex items-center gap-1.5">
+<span class="w-3.5 h-3.5 rounded-full bg-blue-900 ring-1 ring-offset-1 ring-blue-500"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-emerald-800"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-neutral-900"></span>
+<span class="text-[10px] text-on-surface-variant font-medium ml-auto">Navy</span>
+</div>
+<h2 class="font-body-sm text-body-sm font-semibold text-on-surface line-clamp-2 leading-tight min-h-[32px]">
+          Polo Republica Men's Tipped Polo Shirt
+        </h2>
+<div class="flex items-baseline gap-1.5 flex-wrap">
+<span class="font-price-sale text-price-sale text-primary font-extrabold">Rs. 599</span>
+<span class="font-price-original text-price-original text-on-surface-variant/70 line-through">Rs. 999</span>
+</div>
+<div class="flex flex-col gap-1 mt-0.5">
+<div class="flex justify-between items-center text-[10px] font-bold text-badge-savings-text">
+<span>Export Quality • 8 left</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-tertiary rounded-full w-[65%]"></div>
+</div>
+</div>
+<button class="quick-add-btn mt-1 w-full h-9 bg-primary text-on-primary rounded-lg font-headline-sm text-xs font-bold flex items-center justify-center gap-1 transition-all hover:bg-primary-container active:scale-95 shadow-xs" data-item="PR Tipped Polo">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+<span>Quick Buy</span>
+</button>
+</div>
+</article>
+<!-- Product 4: CLE Men's Cargo Shorts -->
+<article class="deal-card flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm transition-transform active:scale-[0.99]" data-category="men under-999">
+<div class="relative w-full aspect-[1/1.22] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Rugged beige cargo utility shorts with side flap pockets on male model walking in relaxed casual outfit, bright natural daylight studio backdrop, crisp cotton twill fabric." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCvcMXG3XMp7exQFrSWLagYhm38N5JH5c4Fmba0jmWTf3WNyHda67QEtDaiuyul4rzjBAFLrNlUiNTnSNHzGmIHYaTOFB2TqMGdBSvCb4Ls9GIAkENiYbW4w2fRdne-6i6vjZPcGp23qKZXzFjzbZOIGSAUEAyv8BABo9vUAH58tCGPUv7AaLVVqCt6TgQDOw7vtd8uj4M6ssvkuUbsXdu7YBOEo60toRLuJTzW3hKbK8mzB4jdMw"/>
+<span class="absolute top-2 left-2 bg-badge-deal-bg text-badge-deal-text font-label-badge text-label-badge font-extrabold px-2 py-0.5 rounded-full shadow-xs">
+          40% OFF
+        </span>
+<button aria-label="Save to Wishlist" class="wishlist-btn absolute top-2 right-2 w-7 h-7 rounded-full bg-white/85 backdrop-blur-sm flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors shadow-xs">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="p-2.5 flex flex-col flex-1 justify-between gap-1.5">
+<div class="flex items-center gap-1.5">
+<span class="w-3.5 h-3.5 rounded-full bg-stone-300 ring-1 ring-offset-1 ring-stone-400"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-stone-800"></span>
+<span class="text-[10px] text-on-surface-variant font-medium ml-auto">Beige</span>
+</div>
+<h2 class="font-body-sm text-body-sm font-semibold text-on-surface line-clamp-2 leading-tight min-h-[32px]">
+          CLE Men's Cargo Shorts
+        </h2>
+<div class="flex items-baseline gap-1.5 flex-wrap">
+<span class="font-price-sale text-price-sale text-primary font-extrabold">Rs. 899</span>
+<span class="font-price-original text-price-original text-on-surface-variant/70 line-through">Rs. 1,499</span>
+</div>
+<div class="flex flex-col gap-1 mt-0.5">
+<div class="flex justify-between items-center text-[10px] font-bold text-badge-deal-text">
+<span>Only 4 left at this price!</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-promo-coral rounded-full w-[80%]"></div>
+</div>
+</div>
+<button class="quick-add-btn mt-1 w-full h-9 bg-primary text-on-primary rounded-lg font-headline-sm text-xs font-bold flex items-center justify-center gap-1 transition-all hover:bg-primary-container active:scale-95 shadow-xs" data-item="CLE Cargo Shorts">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>Quick Buy</span>
+</button>
+</div>
+</article>
+<!-- Product 5: Rabbit Skins Kid's Fleece Sweat Shirt -->
+<article class="deal-card flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm transition-transform active:scale-[0.99]" data-category="kids under-999 winter">
+<div class="relative w-full aspect-[1/1.22] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A smiling child wearing a cozy jet black crewneck cotton fleece sweatshirt, studio warm ambient rim lighting, cheerful child model apparel look, soft plush knit texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAweP8XgFYjH536XhbtOwHYqzfcCFVfHcONEF8KGgdAei4tmQJGbR9e2vfB3mCr6KZt8gqNhQg_gaF9b8zYSNFLQ9znSlmzYIoDi1fWYrJ7cy_P1O3AcXPFWXXxlhnrPq_ZQN2x6R_DoX3UcpY6l6ER7XDItLq7qrVN-nrhgnVR66zJlnPxEO9quRtEonfE87TN0FTxBWdzAvdnwQwGm13hi3i5VxrgocoOiiRtWn4fbTF3ro5zyFE"/>
+<span class="absolute top-2 left-2 bg-badge-deal-bg text-badge-deal-text font-label-badge text-label-badge font-extrabold px-2 py-0.5 rounded-full shadow-xs">
+          40% OFF
+        </span>
+<button aria-label="Save to Wishlist" class="wishlist-btn absolute top-2 right-2 w-7 h-7 rounded-full bg-white/85 backdrop-blur-sm flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors shadow-xs">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+<span class="absolute bottom-1.5 left-2 bg-black/60 backdrop-blur-xs text-white text-[10px] font-bold px-1.5 py-0.5 rounded">
+          Bundle Deal
+        </span>
+</div>
+<div class="p-2.5 flex flex-col flex-1 justify-between gap-1.5">
+<div class="flex items-center gap-1.5">
+<span class="w-3.5 h-3.5 rounded-full bg-neutral-900 ring-1 ring-offset-1 ring-neutral-400"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-red-700"></span>
+<span class="text-[10px] text-on-surface-variant font-medium ml-auto">Black</span>
+</div>
+<h2 class="font-body-sm text-body-sm font-semibold text-on-surface line-clamp-2 leading-tight min-h-[32px]">
+          Rabbit Skins Kid's Fleece Sweat Shirt
+        </h2>
+<div class="flex items-baseline gap-1.5 flex-wrap">
+<span class="font-price-sale text-price-sale text-primary font-extrabold">Rs. 599</span>
+<span class="font-price-original text-price-original text-on-surface-variant/70 line-through">Rs. 999</span>
+</div>
+<div class="flex flex-col gap-1 mt-0.5">
+<div class="flex justify-between items-center text-[10px] font-bold text-badge-deal-text">
+<span>Only 5 left in stock!</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-promo-coral rounded-full w-[75%]"></div>
+</div>
+</div>
+<button class="quick-add-btn mt-1 w-full h-9 bg-primary text-on-primary rounded-lg font-headline-sm text-xs font-bold flex items-center justify-center gap-1 transition-all hover:bg-primary-container active:scale-95 shadow-xs" data-item="Rabbit Skins Fleece">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>Quick Buy</span>
+</button>
+</div>
+</article>
+<!-- Product 6: Hummel Men's Thumbhole Quarter Zipper -->
+<article class="deal-card flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm transition-transform active:scale-[0.99]" data-category="men winter">
+<div class="relative w-full aspect-[1/1.22] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Athletic man in modern heather grey quarter-zip activewear pullover with thumbhole cuffs, sleek chevron detailing, high-tech moisture wicking fabric, studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6fxCvWmgyHdluAfkGnXMGw_DiBkxVjIAwM_TdJOvxY28be_YUlas-GaPm8NwsawYEqtwvhZRKWgVZoINDWBY2nUcJj2zZbH3weNgU_MxtdPFqK80Pp5kNd5_K69hWGJMUmZTLaiprCfTRwtTL4FU-wTECqayQ-GqcDbPMMiG8CUZLYKfon6569PHxyjoa-t6OP4pV_PRUmCqDFYTgHomFdTPCPH-_U8K5buU-K8TftWOoFwSXnJk"/>
+<span class="absolute top-2 left-2 bg-badge-deal-bg text-badge-deal-text font-label-badge text-label-badge font-extrabold px-2 py-0.5 rounded-full shadow-xs">
+          50% OFF
+        </span>
+<button aria-label="Save to Wishlist" class="wishlist-btn absolute top-2 right-2 w-7 h-7 rounded-full bg-white/85 backdrop-blur-sm flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors shadow-xs">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="p-2.5 flex flex-col flex-1 justify-between gap-1.5">
+<div class="flex items-center gap-1.5">
+<span class="w-3.5 h-3.5 rounded-full bg-slate-400 ring-1 ring-offset-1 ring-slate-500"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-slate-900"></span>
+<span class="text-[10px] text-on-surface-variant font-medium ml-auto">Grey</span>
+</div>
+<h2 class="font-body-sm text-body-sm font-semibold text-on-surface line-clamp-2 leading-tight min-h-[32px]">
+          Hummel Men's Thumbhole Activewear Quarter Zipper
+        </h2>
+<div class="flex items-baseline gap-1.5 flex-wrap">
+<span class="font-price-sale text-price-sale text-primary font-extrabold">Rs. 1,499</span>
+<span class="font-price-original text-price-original text-on-surface-variant/70 line-through">Rs. 2,999</span>
+</div>
+<div class="flex flex-col gap-1 mt-0.5">
+<div class="flex justify-between items-center text-[10px] font-bold text-badge-deal-text">
+<span>Only 4 left at this price!</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-promo-coral rounded-full w-[82%]"></div>
+</div>
+</div>
+<button class="quick-add-btn mt-1 w-full h-9 bg-primary text-on-primary rounded-lg font-headline-sm text-xs font-bold flex items-center justify-center gap-1 transition-all hover:bg-primary-container active:scale-95 shadow-xs" data-item="Hummel Men Thumbhole">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>Quick Buy</span>
+</button>
+</div>
+</article>
+<!-- Product 7: BH Women's Maxi Funnel Neck Puffer Gilet -->
+<article class="deal-card flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm transition-transform active:scale-[0.99]" data-category="women winter clearance">
+<div class="relative w-full aspect-[1/1.22] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Chic woman fashion model wearing an oversized black maxi funnel neck puffer gilet sleeveless vest jacket, sleek winter street style, studio minimalist lookbook." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB68h_l916Pr_XJIyqR27_e1FUUlpL1acV0gIzURH8-x935AgTccJIXOTH55HCp56PA1rzMYefgXTV6sBDWggzI31spqfzvmxw6C5tVsSByWtzgzYChwG8fZDaXTtrXofjnu-vk_WMqXMf3hebkutvwzj1uNX8chBcjNCLQknZWaQpY-wczzXnN-3cOkmsPv-ekUjvkVpVgxqfFm6j1LwWLPFn1HoOQ5gy9o4fGWcZVSTA5sIDAfCI"/>
+<span class="absolute top-2 left-2 bg-badge-deal-bg text-badge-deal-text font-label-badge text-label-badge font-extrabold px-2 py-0.5 rounded-full shadow-xs">
+          42% OFF
+        </span>
+<button aria-label="Save to Wishlist" class="wishlist-btn absolute top-2 right-2 w-7 h-7 rounded-full bg-white/85 backdrop-blur-sm flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors shadow-xs">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+<span class="absolute bottom-1.5 left-2 bg-badge-deal-bg text-badge-deal-text text-[10px] font-extrabold px-1.5 py-0.5 rounded">
+          Clearance
+        </span>
+</div>
+<div class="p-2.5 flex flex-col flex-1 justify-between gap-1.5">
+<div class="flex items-center gap-1.5">
+<span class="w-3.5 h-3.5 rounded-full bg-neutral-900 ring-1 ring-offset-1 ring-neutral-400"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-stone-300"></span>
+<span class="text-[10px] text-on-surface-variant font-medium ml-auto">Black</span>
+</div>
+<h2 class="font-body-sm text-body-sm font-semibold text-on-surface line-clamp-2 leading-tight min-h-[32px]">
+          BH Women's Maxi Funnel Neck Puffer Gilet
+        </h2>
+<div class="flex items-baseline gap-1.5 flex-wrap">
+<span class="font-price-sale text-price-sale text-primary font-extrabold">Rs. 1,999</span>
+<span class="font-price-original text-price-original text-on-surface-variant/70 line-through">Rs. 3,499</span>
+</div>
+<div class="flex flex-col gap-1 mt-0.5">
+<div class="flex justify-between items-center text-[10px] font-bold text-badge-deal-text">
+<span>Only 2 left!</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-error rounded-full w-[90%]"></div>
+</div>
+</div>
+<button class="quick-add-btn mt-1 w-full h-9 bg-primary text-on-primary rounded-lg font-headline-sm text-xs font-bold flex items-center justify-center gap-1 transition-all hover:bg-primary-container active:scale-95 shadow-xs" data-item="BH Women's Puffer Gilet">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>Quick Buy</span>
+</button>
+</div>
+</article>
+<!-- Product 8: East West Women's Short Sleeve Tee Shirt -->
+<article class="deal-card flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm transition-transform active:scale-[0.99]" data-category="women under-999">
+<div class="relative w-full aspect-[1/1.22] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Casual smiling woman wearing a powder blue premium combed cotton crewneck t-shirt, relaxed studio posture, bright cheerful clean lighting, export garment drape." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYZw-ApC406Cj4nxeaE-paAx95uvIyLiTlhzMRF7IFmHFJ-6Xd4b18zb4otXnYgA0nWN9hKKxfyYYIj2WmqaSFrYSWicK4qHW-3Wa8W-bE3pKJHUQMBQ3Nyb8nfgtlrbeQJRZMrqFFfal6QUG-qNH7EIz4fEqmDsBnAOtZkgd1bjeDnHSvQV_8hE-KqrSoLd-pU_-i6rsaW35uOZCULilwmooRF0TodHkEUEe6Mfia5c61nDht8rs"/>
+<span class="absolute top-2 left-2 bg-badge-deal-bg text-badge-deal-text font-label-badge text-label-badge font-extrabold px-2 py-0.5 rounded-full shadow-xs">
+          40% OFF
+        </span>
+<button aria-label="Save to Wishlist" class="wishlist-btn absolute top-2 right-2 w-7 h-7 rounded-full bg-white/85 backdrop-blur-sm flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors shadow-xs">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+<span class="absolute bottom-1.5 left-2 bg-black/60 backdrop-blur-xs text-white text-[10px] font-bold px-1.5 py-0.5 rounded">
+          Bundle Pick
+        </span>
+</div>
+<div class="p-2.5 flex flex-col flex-1 justify-between gap-1.5">
+<div class="flex items-center gap-1.5">
+<span class="w-3.5 h-3.5 rounded-full bg-sky-300 ring-1 ring-offset-1 ring-sky-400"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-rose-300"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-neutral-900"></span>
+<span class="text-[10px] text-on-surface-variant font-medium ml-auto">Blue</span>
+</div>
+<h2 class="font-body-sm text-body-sm font-semibold text-on-surface line-clamp-2 leading-tight min-h-[32px]">
+          East West Women's Short Sleeve Tee Shirt
+        </h2>
+<div class="flex items-baseline gap-1.5 flex-wrap">
+<span class="font-price-sale text-price-sale text-primary font-extrabold">Rs. 599</span>
+<span class="font-price-original text-price-original text-on-surface-variant/70 line-through">Rs. 999</span>
+</div>
+<div class="flex flex-col gap-1 mt-0.5">
+<div class="flex justify-between items-center text-[10px] font-bold text-badge-savings-text">
+<span>6 left • Factory Surplus</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-tertiary rounded-full w-[70%]"></div>
+</div>
+</div>
+<button class="quick-add-btn mt-1 w-full h-9 bg-primary text-on-primary rounded-lg font-headline-sm text-xs font-bold flex items-center justify-center gap-1 transition-all hover:bg-primary-container active:scale-95 shadow-xs" data-item="East West Women's Tee">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+<span>Quick Buy</span>
+</button>
+</div>
+</article>
+</section>
+<!-- Bundle Savings Upsell Callout -->
+<section class="px-margin pb-space-lg">
+<div class="w-full rounded-2xl bg-surface-container-high p-space-md flex items-center justify-between gap-space-sm shadow-xs">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-1 text-primary font-bold text-xs uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">loyalty</span>
+<span>Bundle &amp; Save More</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Buy Any 3 Deals, Get Extra 10% Off</h3>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Auto-applied at checkout for all surplus pieces</p>
+</div>
+<button class="flex-shrink-0 px-3 py-2 bg-on-surface text-surface rounded-xl font-headline-sm text-xs font-bold flex items-center gap-0.5 shadow-xs">
+<span>View</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Value & Trust Pillars -->
+<section class="px-margin pb-space-xl grid grid-cols-2 gap-space-sm">
+<div class="bg-surface-container-lowest p-3 rounded-xl shadow-xs flex items-center gap-2.5">
+<span class="w-9 h-9 rounded-full bg-badge-savings-bg text-badge-savings-text flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[12px] font-bold text-on-surface">Free Shipping</span>
+<span class="text-[11px] text-on-surface-variant">On prepaid orders</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-xl shadow-xs flex items-center gap-2.5">
+<span class="w-9 h-9 rounded-full bg-badge-deal-bg text-badge-deal-text flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[12px] font-bold text-on-surface">100% Genuine</span>
+<span class="text-[11px] text-on-surface-variant">Original export surplus</span>
+</div>
+</div>
+</section>
+<!-- Toast Notification Container (Fixed Interactive Micro-delight) -->
+<div class="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 transform translate-y-12 opacity-0 pointer-events-none w-[90%] max-w-[340px]" id="deal-toast">
+<div class="bg-on-surface text-surface py-2.5 px-4 rounded-xl shadow-xl flex items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-promo-coral text-[20px]">check_circle</span>
+<span class="font-body-sm text-xs font-semibold text-white" id="toast-message">Added to your bag!</span>
+</div>
+<span class="text-[11px] font-bold text-promo-coral uppercase tracking-wide">Reserved</span>
+</div>
+</div>
+</div>
+<script>
+  // Countdown Timer Micro-Interaction
+  (function initTimer() {
+    let days = 2, hours = 1, mins = 40, secs = 29;
+    const daysEl = document.getElementById('timer-days');
+    const hoursEl = document.getElementById('timer-hours');
+    const minsEl = document.getElementById('timer-mins');
+    const secsEl = document.getElementById('timer-secs');
+
+    setInterval(() => {
+      if (secs > 0) {
+        secs--;
+      } else {
+        secs = 59;
+        if (mins > 0) {
+          mins--;
+        } else {
+          mins = 59;
+          if (hours > 0) {
+            hours--;
+          } else {
+            hours = 23;
+            if (days > 0) days--;
+          }
+        }
+      }
+      if (daysEl) daysEl.innerText = days.toString().padStart(2, '0');
+      if (hoursEl) hoursEl.innerText = hours.toString().padStart(2, '0');
+      if (minsEl) minsEl.innerText = mins.toString().padStart(2, '0');
+      if (secsEl) secsEl.innerText = secs.toString().padStart(2, '0');
+    }, 1000);
+  })();
+
+  // Filter Chips Micro-Interaction
+  const chips = document.querySelectorAll('.filter-chip');
+  const cards = document.querySelectorAll('.deal-card');
+
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      chips.forEach(c => {
+        c.classList.remove('bg-on-background', 'text-surface-container-lowest');
+        c.classList.add('bg-surface-subtle', 'text-on-surface-variant');
+      });
+      chip.classList.remove('bg-surface-subtle', 'text-on-surface-variant');
+      chip.classList.add('bg-on-background', 'text-surface-container-lowest');
+
+      const cat = chip.getAttribute('data-category');
+      cards.forEach(card => {
+        if (cat === 'all') {
+          card.style.display = 'flex';
+        } else {
+          const itemCats = card.getAttribute('data-category') || '';
+          if (itemCats.includes(cat)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        }
+      });
+    });
+  });
+
+  // Wishlist Heart Toggle
+  const wishlistButtons = document.querySelectorAll('.wishlist-btn');
+  wishlistButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const icon = btn.querySelector('.material-symbols-outlined');
+      if (icon) {
+        if (icon.getAttribute('style')?.includes('FILL')) {
+          icon.removeAttribute('style');
+          btn.classList.remove('text-primary');
+          btn.classList.add('text-on-surface-variant');
+        } else {
+          icon.setAttribute('style', "font-variation-settings: 'FILL' 1;");
+          btn.classList.remove('text-on-surface-variant');
+          btn.classList.add('text-primary');
+        }
+      }
+    });
+  });
+
+  // Quick Buy Toast Trigger
+  const quickAddButtons = document.querySelectorAll('.quick-add-btn');
+  const toast = document.getElementById('deal-toast');
+  const toastMsg = document.getElementById('toast-message');
+  let toastTimeout;
+
+  quickAddButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const itemTitle = btn.getAttribute('data-item') || 'Item';
+      if (toastMsg) toastMsg.innerText = itemTitle + ' added to bag!';
+      if (toast) {
+        toast.classList.remove('opacity-0', 'translate-y-12', 'pointer-events-none');
+        toast.classList.add('opacity-100', 'translate-y-0');
+        clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(() => {
+          toast.classList.remove('opacity-100', 'translate-y-0');
+          toast.classList.add('opacity-0', 'translate-y-12', 'pointer-events-none');
+        }, 2200);
+      }
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-4px_16px_rgba(17,24,39,0.06)]" data-active-classes="text-primary font-bold"><div class="h-16 px-space-xs flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[24px]">storefront</span><span class="font-label-bottom-nav text-label-bottom-nav mt-0.5">Home</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="categories" href="#"><span class="material-symbols-outlined text-[24px]">category</span><span class="font-label-bottom-nav text-label-bottom-nav mt-0.5">Categories</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] transition-colors relative text-primary font-bold" data-path="flash-deals" href="#"><span class="material-symbols-outlined text-[24px] text-promo-coral">local_fire_department</span><span class="font-label-bottom-nav text-label-bottom-nav mt-0.5 text-promo-coral">Crazy Deals</span><span class="absolute top-1 right-2 w-2 h-2 rounded-full bg-primary animate-pulse"></span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors relative" data-path="cart" href="#"><span class="material-symbols-outlined text-[24px]">shopping_bag</span><span class="font-label-bottom-nav text-label-bottom-nav mt-0.5">Cart</span><span class="absolute top-0.5 right-2 w-4 h-4 bg-primary text-on-primary font-label-badge text-label-badge rounded-full flex items-center justify-center font-bold">2</span></a></div></nav></body></html>
